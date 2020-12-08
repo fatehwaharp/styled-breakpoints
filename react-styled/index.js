@@ -23,12 +23,12 @@ const useBreakpoint = (breakpoint) => {
     setIsBreak(mq.matches);
 
     // Update the state whenever the media query match state changes
-    mq.addEventListener('change', handleChange);
+    // mq.addEventListener('change', handleChange);
 
-    // Clean up on unmount and if the query changes
-    return function cleanup() {
-      mq.removeEventListener('change', handleChange);
-    };
+    // // Clean up on unmount and if the query changes
+    // return function cleanup() {
+    //   mq.removeEventListener('change', handleChange);
+    // };
   }, [query, handleChange]);
 
   // Return the current match state
